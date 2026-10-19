@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repomind"
+version = "0.1.0"
+description = "基于 LangChain 的本地代码仓库智能问答助手，支持在线/离线大模型与 RAG 检索"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Sitong Su" }]
+keywords = ["langchain", "rag", "code-assistant", "ollama", "vector-database"]
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "langchain>=1.0.0",
+    "langchain-core>=1.0.0",
+    "langchain-classic>=1.0.0",
+    "langchain-chroma>=0.2.0",
+    "langchain-openai>=0.3.0",
+    "langchain-ollama>=0.3.0",
+    "chromadb>=0.5.0",
+    "streamlit>=1.36.0",
+    "typer>=0.12.0",
+    "rich>=13.7.0",
+    "pydantic-settings>=2.3.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+repomind = "repomind.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["repomind*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
