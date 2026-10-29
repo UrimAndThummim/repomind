@@ -1,0 +1,14 @@
+services:
+  repomind:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      # 挂载工作目录，便于在容器内索引宿主机仓库
+      - ./:/app
+      - ./.vectorstore:/app/.vectorstore
+    environment:
+      # 离线模式下访问宿主机 Ollama；在线模式在 .env 中配置即可
+      REPOMIND_OLLAMA_BASE_URL: http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
