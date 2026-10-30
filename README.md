@@ -1,6 +1,6 @@
 # RepoMind
 
-[![CI](https://github.com/<你的用户名>/repomind/actions/workflows/ci.yml/badge.svg)](https://github.com/<你的用户名>/repomind/actions/workflows/ci.yml)
+[![CI](https://github.com/UrimAndThummim/repomind/actions/workflows/ci.yml/badge.svg)](https://github.com/UrimAndThummim/repomind/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![LangChain](https://img.shields.io/badge/LangChain-1.x-ff69b4)](https://python.langchain.com/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
@@ -110,7 +110,7 @@ sequenceDiagram
 ### 安装
 
 ```bash
-git clone https://github.com/<你的用户名>/repomind.git
+git clone https://github.com/UrimAndThummim/repomind.git
 cd repomind
 
 python -m venv .venv
